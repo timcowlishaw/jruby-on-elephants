@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>My Preso</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/1">
+<p><img src="./file/one/elephant_rgb.jpg" width="1000" height="749" width="250" alt="anellyphant"/></p>
+
+<h1>JRuby on Elephants</h1>
+
+<h2>Tim Cowlishaw</h2>
+
+<h3>tim@timcowlishaw.co.uk / @mistertim</h3></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/2">
+<p><img src="./file/one/hadoop+elephant_rgb.png" width="2000" height="473" width="500" alt="hadoop"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/3">
+<p><img src="./file/one/mapreduce.jpg" width="600" height="600" width="500" alt="mapreduce"/></p>
+
+<h1>Map-reduce Framework</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/4">
+<p><img src="./file/one/data.jpg" width="325" height="396" alt="data-intensive"/></p>
+
+<h1>Data-intensive</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/5">
+<p><img src="./file/one/analytics.jpg" width="405" height="228" alt="analytics"/></p>
+
+<h1>Analytics</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/6">
+<p><img src="./file/one/search.jpg" width="464" height="382" alt="search"/></p>
+
+<h1>Search</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/7">
+<p><img src="./file/one/machinelearning.jpg" width="321" height="445" alt="machine learning"/></p>
+
+<h1>Machine learning</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/8">
+<p><img src="./file/one/mahout-blue-with-hands-200.png" width="473" height="200" width="500" alt="mahout"/></p>
+
+<ul>
+<li>Machine-learning library</li>
+<li>Abstraction layer on top of hadoop</li>
+<li>Implementations of many popular algorithms and techniques</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/9">
+<h1>What I'll cover</h1>
+
+<ul>
+<li>Brief bit of theoretical background</li>
+<li>Kitten-detection with Mahout and JRuby</li>
+<li>Some JRuby Gotchas</li>
+<li>Java unpleasantness, and ways of overcoming it</li>
+<li>How well did we do?</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/10">
+<p><img src="./file/one/machinelearning2.jpg" width="440" height="324" alt="Machine learning"/></p>
+
+<h1>Machine learning</h1>
+
+<ul>
+<li>There are two types of machine learning problem...</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/11">
+<p><img src="./file/one/supervised.jpg" width="400" height="351" alt="Supervised learning"/></p>
+
+<h1>Supervised learning...</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/12">
+<p><img src="./file/one/unsupervised.jpg" width="468" height="350" alt="Unsupervised learning"/></p>
+
+<h1>...and unsupervised learning</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/13">
+<p><img src="./file/one/supervised.jpg" width="400" height="351" alt="Supervised learning"/></p>
+
+<h1>Supervised learning</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/14">
+<p><img src="./file/one/example.jpg" width="432" height="413" alt="learning by example"/></p>
+
+<h1>Learning by example</h1>
+
+<h2>"Right answers" provided to algorithm in the form of training data</h2></div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/15">
+<h1>Supervised learning</h1>
+
+<ul>
+<li>Classification</li>
+<li>Ranking</li>
+<li>Regression</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/16">
+<p><img src="./file/one/unsupervised.jpg" width="468" height="350" alt="Unsupervised learning"/></p>
+
+<h1>Unsupervised learning</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/17">
+<p><img src="./file/one/findpatterns.jpg" width="400" height="302" alt="Finding patterns"/></p>
+
+<h1>Finding hidden patterns</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/18">
+<h1>Unsupervised learning</h1>
+
+<ul>
+<li>Clustering</li>
+<li>Collaborative Filtering (Recommendations)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/19">
+<h1>Mahout can do all these things...</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/20">
+<p><img src="./file/one/scale.jpg" width="300" height="300" alt="Scale"/></p>
+
+<h1>...at scale!</h1>
+
+<ul>
+<li>But...</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/21">
+<p><img src="./file/one/java.png" width="689" height="420" alt="Java"/></p>
+
+<h1>... Java. :-(</h1>
+
+<ul>
+<li>Thankfully...</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/22">
+<p><img src="./file/one/ruby.png" width="350" height="350" alt="Ruby"/></p>
+
+<h1>we have JRuby.</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets" ref="one/01_slide/23">
+<p><img src="./file/one/classification2.jpg" width="500" height="351" alt="Classification"/></p>
+
+<h1>Classification</h1>
+
+<ul>
+<li>An example...</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/24">
+<p><img src="./file/one/kittendetection.jpg" width="499" height="666" width="400" alt="Kitten detection"/></p>
+
+<h1>Kitten detection</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/25">
+<p><img src="./file/one/tweet_cute.png" width="790" height="179" alt="Cute"/></p>
+
+<h1>VS</h1>
+
+<p><img src="./file/one/tweet_not_cute.png" width="755" height="120" alt="Not cute"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="one/01_slide/26">
+<pre class="sh_ruby"><code>tweet =~ /((kitt(ah|eh|y)|OMG|cute|a+w+|squ+e+)!?)+/i</code></pre>
+
+<ul>
+<li>Job done!</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/27">
+<h1>Thanks!</h1>
+
+<h2>Questions?</h2>
+
+<ul>
+<li>Only joking...</li>
+<li>...it's not quite that simple.</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/28">
+<p><img src="./file/one/signals.jpg" width="393" height="560" width="250" alt="signals"/></p>
+
+<h1>Why?</h1>
+
+<ul>
+<li>What if we don't know what the signals are?</li>
+<li>Machine learning allows our system to work this out for itself</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/29">
+<p><img src="./file/one/classification.jpg" width="450" height="458" width="250" alt="Classification"/></p>
+
+<h1>This is a Classification problem</h1>
+
+<ul>
+<li>Use techniques from statistics</li>
+<li>Logistic regression</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/30">
+<p><img src="./file/one/logistic_1.jpg" width="2592" height="1552" width="500" alt="Logistic regression"/></p>
+
+<h1>Logistic regression</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/31">
+<p><img src="./file/one/logistic_2.jpg" width="2592" height="1552" width="500" alt="Logistic regression"/></p>
+
+<h1>Logistic regression</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/32">
+<p><img src="./file/one/logistic_3.jpg" width="2592" height="1552" width="500" alt="Logistic regression"/></p>
+
+<h1>Logistic regression</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/33">
+<h1>Need to turn text into numbers</h1>
+
+<ul>
+<li>Each training / test example becomes a vector</li>
+<li>Count TERM FREQUENCY</li>
+<li>Again, not that simple</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/34">
+<h1>Some words are more useful than others</h1>
+
+<ul>
+<li>"autohagiographer" vs. "because"</li>
+<li>Stop-words</li>
+<li>IDF weighting</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/35">
+<h1>Some words are really the same</h1>
+
+<ul>
+<li>Tokenization</li>
+<li>Normalisation</li>
+<li>Stemming</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center small" ref="one/01_slide/36">
+<h1>Porter Stemming Algorithm</h1>
+
+<p>Set of transformations, applied sequentially</p>
+
+<pre class="sh_ruby"><code>gsub "sses", "ss"
+gsub "ies",  "i"
+gsub "ss",   "ss"
+gsub "s",    ""</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content small" ref="one/01_slide/37">
+<pre class="sh_ruby"><code>"The fattest cat"         # input text
+["The", "fattest", "cat"] # tokenized
+["the", "fattest", "cat"] # normalized
+["fattest", "cat"]        # stop-words filtered
+["fat", "cat"]            # stemmed</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/38">
+<h1>Apache Lucene</h1>
+
+<ul>
+<li>Powerful text manipulation library</li>
+<li>Easy to integrate with Mahout</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/39">
+<pre class="sh_ruby"><code>analyzer = TextAnalyzer.new(Version::LUCENE_34) do |a| 
+  a.filter StandardFilter
+  a.filter LowerCaseFilter
+  a.filter(StopFilter) {|token_stream| 
+    [ a.version, 
+      token_stream, 
+      StandardAnalyzer::STOP_WORDS_SET]
+  }
+  a.filter PorterStemFilter
+end</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content small bullets incremental" ref="one/01_slide/40">
+<h1>Creating the model</h1>
+
+<ul>
+<li>Training data</li>
+<li>~3000 tweets</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental #" ref="one/01_slide/41">
+<p><img src="./file/one/machinelearning.jpg" width="321" height="445" width="250" alt="Input"/></p>
+
+<h1>More Input!</h1>
+
+<ul>
+<li>3000 datapoints isn't that many</li>
+<li>Mahout doesn't perform so well on small datasets</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/42">
+<p><img src="./file/one/example.jpg" width="432" height="413" width="250" alt="Learning by example"/></p>
+
+<h1>This is a supervised learning technique</h1>
+
+<ul>
+<li>Learning by example</li>
+<li>Each labelled with their class</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small center bullets incremental" ref="one/01_slide/43">
+<p><img src="./file/one/leak.jpg" width="500" height="364" width="250" alt="Leak"/></p>
+
+<h1>DANGER!</h1>
+
+<ul>
+<li>Target leak</li>
+<li>Allows model to 'cheat'</li>
+<li>Danger of 'overfitting'</li>
+<li>Strip out URLs</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/44">
+<pre class="sh_ruby"><code>analyzer = TextAnalyzer.new(Version::LUCENE_34) do |a| 
+  a.pre_processor do |text|
+    strip_usernames(strip_hashtags(strip_urls(text)))
+  end
+
+  a.filter StandardFilter
+  a.filter LowerCaseFilter
+  a.filter(StopFilter) {|token_stream| 
+    [ a.version, 
+      token_stream, 
+      StandardAnalyzer::STOP_WORDS_SET]
+  }
+  a.filter PorterStemFilter
+end</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/45">
+<h1>Training the model</h1>
+
+<pre class="sh_ruby"><code>classifier = LogisticRegressionClassifier.new(2, analyzer) do |classifier|
+  training_data.each do |row|
+    category = row[8].to_i
+    text = row[7]
+    classifier.train(category, text)
+  end
+  #... use the model to classify something ...#
+end</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content small" ref="one/01_slide/46">
+<h1>Open vim now, Tim!</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/47">
+<h1>JRuby gotachas</h1></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/48">
+<h1>JRuby gotchas</h1>
+
+<pre><code>export CLASSPATH=$CLASSPATH:jruby-complete.jar
+</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content small center" ref="one/01_slide/49">
+<h1>Jruby gotchas</h1>
+
+<pre class="sh_ruby"><code>SomeClass.class != SomeClass.java_class</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/50">
+<h1>Jruby gotchas</h1>
+
+<pre class="sh_java"><code>SomeGenericClass&lt;SomeClass&gt; /* Type info is erased! */
+SomeGenericClass&lt;Object&gt;    /* Becomes this at runtime */</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/51">
+<h1>Jruby gotchas</h1>
+
+<pre class="sh_java"><code>public String anOverloadedFunction(String arg, int arg2)
+public String anOverloadedFunction(Object arg, int arg2)</code></pre>
+
+<p>Solution:</p>
+
+<pre class="sh_ruby"><code>object.java_send(:an_overloaded_function,
+   [java.lang.String, Java::int],
+   "Hello there!", 42)</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content smaller center" ref="one/01_slide/52">
+<p><img src="./file/one/evaluation.jpg" width="850" height="565" width="400" alt="Evaluation"/></p>
+
+<h1>How well did we do?</h1>
+
+<p>Evaluating ML models</p></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/53">
+<h1>How well did we do?</h1>
+
+<p>Training / testing set</p>
+
+<pre class="sh_ruby"><code>data = CSV.read(DATA_FILE).shuffle
+training_data = data[0..data.length/2]
+testing_data = data[data.length/2..data.length-1]</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content smaller bullets incremental" ref="one/01_slide/54">
+<h1>How well did we do?</h1>
+
+<ul>
+<li>Metrics</li>
+<li>Proportion guessed correctly</li>
+<li>Log-likelihood</li>
+<li>Others for other types of problem (Precision, Recall, DCG, NDCG..)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/01_slide/55">
+<h1>How well did we do?</h1>
+
+<p>But can we detect kittens?</p>
+
+<pre><code>Proportion Correct: 0.921919770773639
+Average Log-Likelihood: -0.245223695559474
+</code></pre></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="one/01_slide/56">
+<h1>Thanks!</h1>
+
+<p>Questions?</p>
+
+<p>tim@timcowlishaw.co.uk / @mistertim</p></div>
+</div></div>
+
+</body>
+</html>
